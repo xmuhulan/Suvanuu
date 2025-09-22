@@ -1,0 +1,20 @@
+from flask import Flask, render_template, request
+
+# Flask апп үүсгэх
+app = Flask(__name__)
+
+# Homepage буюу "/" хуудас
+@app.route("/", methods=["GET", "POST"])
+def home():
+    if request.method == "POST":
+        # Form-с нэр болон мэндчилгээ авах
+        name = request.form.get("name")
+        message = request.form.get("message")
+        # greeting.html руу өгөгдөл дамжуулж харуулах
+        return render_template("greeting.html", name=name, message=message)
+    # Form submit болоогүй бол index.html харуулах
+    return render_template("index.html")
+
+# Серверийг ажиллуулах
+if __name__ == "__main__":
+    app.run(debug=True)
