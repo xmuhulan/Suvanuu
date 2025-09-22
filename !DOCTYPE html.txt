@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Мэндчилгээ</title>
+    <title>Suvanuu QR Site</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Сайн байна уу, {{ name }}! 🎉</h1>
-    <p>{{ message }}</p>
-    <a href="/">Буцах</a>
+    <h1>QR Мэндчилгээний Сайт 🎉</h1>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Нэрээ бичнэ үү" required><br><br>
+        <textarea name="message" placeholder="Мэндчилгээ бичнэ үү" required></textarea><br><br>
+        <button type="submit">Мэндчилгээ илгээх</button>
+    </form>
 </body>
 </html>
