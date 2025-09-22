@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Мэндчилгээ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Сайн байна уу, {{ name }}! 🎉</h1>
+    <p>{{ message }}</p>
+    <a href="/">Буцах</a>
+</body>
+</html>
